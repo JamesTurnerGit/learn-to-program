@@ -1,12 +1,5 @@
 def my_shuffle array
-  return array if array.nil?
-  new = []
-  while array.length > 0
-    element_index = rand(0..array.length-1)
-    new << array[element_index]
-    array.delete_at(element_index)
-  end
-  new
+  array.shuffle()
 end
 #Build your own playlist.
 
