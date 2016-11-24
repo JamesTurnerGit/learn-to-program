@@ -1,4 +1,4 @@
-def OSRN num
+def roman_numeral num
 	print num.to_s + " "
 	key = {M: 1000,D: 500,C: 100, L: 50,  X: 10, V: 5,I: 1}
 	output = ""
@@ -14,6 +14,6 @@ def OSRN num
 	output
 end
 
-puts OSRN 2530
-puts OSRN 999
-puts OSRN 1234
+puts roman_numeral 2530
+puts roman_numeral 999
+puts roman_numeral 1234

@@ -7,7 +7,7 @@ def englishNumber remaining_number
   end
   number_string = remaining_number < 0 ? "negative " : ""
   remaining_number = remaining_number.abs
-  
+
   #build arrays
   onesPlace = ['one',   'two',    'three',    'four',     'five',    'six',     'seven',     'eight',    'nine']
   tensPlace = ['ten',   'twenty', 'thirty',   'forty',    'fifty',   'sixty',   'seventy',   'eighty',   'ninety']
@@ -18,10 +18,10 @@ def englishNumber remaining_number
     million_billion << [1000 ** (index + 1),array_words]
   end
 
-  #bignums 
+  #bignums
   million_billion.reverse_each do |array_number,array_words|
-    currently_writing = remaining_number/array_number        
-    remaining_number  -= currently_writing * array_number  
+    currently_writing = remaining_number/array_number
+    remaining_number  -= currently_writing * array_number
     if currently_writing > 0
       number_string += englishNumber(currently_writing) + ' ' + array_words
       if remaining_number > 0
@@ -49,3 +49,7 @@ def englishNumber remaining_number
 end
 
 #puts englishNumber 5_555_555_556
+num = 20
+num.downto(2){|i|puts "#{englishNumber(i)} bottles of beer on the wall, #{englishNumber(i)} bottles of beer! \nTake one down and pass it around, #{englishNumber(i-1)} bottles of beer on the wall!"}
+puts "one bottle of beer on the wall, one bottles of beer! \nTake it down and pass it around, no bottles of beer on the wall!"
+puts "no bottles of beer on the walllll!"

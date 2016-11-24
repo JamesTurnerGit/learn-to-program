@@ -11,4 +11,4 @@ def Ask question
 end
 
 Ask "do you like eating tacos?"
-sucks_dicks = Ask "do you suck dicks?"
+good time = Ask "do you like to have a good time"
