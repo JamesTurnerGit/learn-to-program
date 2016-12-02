@@ -1,4 +1,5 @@
 def my_shuffle array
+  #deal into 7 piles, add them all together again at the end
   array.shuffle()
 end
 #Build your own playlist.
