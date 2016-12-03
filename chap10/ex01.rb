@@ -1,11 +1,12 @@
-def my_shuffle array
-  new = []
-  while array.length > 0
-    element_index = rand(0..array.length-1)
-    new << array[element_index]
-    array.delete_at(element_index)
+def my_shuffle array # Magic style yo!
+  new_array = [[],[],[],[],[],[],[]]
+  array.sort
+  until array.length <= 0 do
+    for i in (0..6) do
+      new_array[i] << array.pop
+    end
   end
-  new
+  new_array.shuffle.flatten.compact
 end
 
 # puts my_shuffle ["test", "test","thing"]
