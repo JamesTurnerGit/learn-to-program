@@ -96,8 +96,7 @@ end
 
 my_dragon = Dragon.new "Jimmeh"
 puts "command please"
-#input = gets.chomp
-input = "feed"
+input = gets.chomp
 case input
 when "feed"  ;my_dragon.feed
 when "walk"  ;my_dragon.walk
